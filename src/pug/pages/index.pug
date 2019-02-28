@@ -1,0 +1,27 @@
+extends ../layouts/main
+
+block variables
+  - var title = 'Landing page mini'
+block content
+  include ../mixins.pug
+  include ../includes/to-top.pug
+  include ../includes/header.pug
+  include ../includes/banner.pug
+  include ../includes/about.pug
+  include ../includes/quote.pug
+  include ../includes/team.pug
+  include ../includes/facts.pug
+  include ../includes/service.pug
+  include ../includes/pricing.pug
+  include ../includes/testimonials.pug
+  include ../includes/works.pug
+  include ../includes/tweet.pug
+  include ../includes/blog.pug
+  include ../includes/clients.pug
+  include ../includes/contact.pug
+  include ../includes/footer.pug
+  block scriptsInBody
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js")
+    script(src="https://cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/jquery.validate.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery-smooth-scroll/2.2.0/jquery.smooth-scroll.min.js")
+    script(src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js")

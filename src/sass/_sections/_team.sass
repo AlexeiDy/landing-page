@@ -1,0 +1,102 @@
+.team
+  padding-top: 101px
+  padding-bottom: 98px
+.team__title
+  margin-bottom: 147px
+.team__list
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  list-style-type: none
+  +min-screen($md)
+    flex-direction: row 
+    flex-wrap: wrap
+.team__list-item
+  position: relative
+  padding: 26px 15px 40px 
+  text-align: center
+  width: 100%
+  border-top: 4px solid transparent
+  &:hover
+    border-color: #f39c12
+    background-color: #f0f0f0
+    .team__list-item-job:after
+      background-color: #e74c3c
+  +min-screen($md)
+    width: 50%
+  +min-screen($xl)
+    width: 269px
+.team__list--item-img--wrap
+  position: relative
+  +size(200px)
+  margin: 0 auto 
+  margin-bottom: 26px
+  padding: 5px
+  background-color: #f2f2f2
+  border: 1px solid #e6e6e6
+  border-radius: 50%
+.team__list-item-icon
+  display: flex
+  align-items: center
+  justify-content: center 
+  position: absolute
+  left: 5px
+  right: 5px
+  top: 5px
+  bottom: 5px
+  background-color: #e8f8f4
+  border-radius: 50%
+  & .icon
+    +size(56px,62px)
+    fill: #fff
+.team__list-item-img
+  width: 100%
+  height: 100%
+  border-radius: 50%
+.team__list-item-name
+  margin-bottom: 4px
+  font-size: rem(20px)
+  font-family: $OpenSansBold
+  line-height: rem(20px)
+  text-transform: uppercase
+  color: #0d0d0d
+.team__list-item-job
+  position: relative
+  margin-bottom: 22px 
+  font-family: $Lato
+  font-size: rem(15px)
+  color: #999
+  &:after
+    content: ''
+    position: absolute
+    left: 0
+    right: 0
+    bottom: -14px
+    display: block
+    +size(20px, 4px)
+    margin: 0 auto
+    background-color: #ccc
+.team__list-item-text
+  line-height: rem(28px)
+  color: #737373
+  margin-bottom: 27px
+.team__list-item-socials
+  position: absolute
+  left: 0
+  right: 0
+  top: 100%
+  margin-top: -48px
+.team__social-list
+  list-style-type: none
+  text-align: center
+.team__social-list-item
+  display: inline-block
+.team__social-list-link
+  display: inline-block
+  padding: 0 5px
+  & .icon
+    +size(18px)
+    fill: #999
+  &:hover
+    & .icon
+      fill: #f39c12

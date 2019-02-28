@@ -1,0 +1,19 @@
+.g-section.testimonials
+  .container
+    -var items = [{'name':'Maria Jones','text':'"Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit"','photo':'user1.png'},/*{'name':'','text':'','photo':''},{'name':'','text':'','photo':''}*/]
+    .testimonials__slider.js-testimonials-slider
+      each item in items
+       -var num = 1
+       while (num < 4) 
+        .js-testimonials-slider-item
+          .testimonials__item
+            .testimonials__item-name=item.name
+            .testimonials__item-text=item.text
+            .testimonials__item-avatar
+              .testimonials__item-icon
+                +icon('team-user')
+              -var image = true
+                if(image)
+                  img(src="/img/sections/testimonials/slider/"+item.photo,alt='some images').testimonials__item-img
+        -num++
+

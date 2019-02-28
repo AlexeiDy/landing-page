@@ -1,0 +1,18 @@
+section.service#services
+  .container
+    .s-title.service__title
+      h2.s-title__name
+        |service
+      p.s-title__text
+        |Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet 
+    -var services = [{'icon':'star','title':'Designing','text':'Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per'},{'icon':'lab','title':'developing','text':'Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per'},{'icon':'world','title':'Branding','text':'Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per'}]
+    .service__list
+      each item in services
+        .service__item
+          .service__item-icon-wrap
+            +icon(item.icon)
+          p.service__item-title
+            |#{item.title}
+          p.service__item-text
+            |#{item.text}
+

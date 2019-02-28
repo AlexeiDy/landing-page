@@ -1,0 +1,131 @@
+.contact
+  padding-top: 100px
+  padding-bottom: 60px
+.contact__title
+  margin-bottom: 50px
+  +min-screen($md)
+    margin-bottom: 142px
+.contact__row
+  display: flex
+  flex-direction: column
+  +min-screen($md)
+    justify-content: space-between
+    flex-direction: row
+    flex-wrap: wrap
+.contact__form-wrap
+  width: 100%
+  margin-bottom: 40px
+  +min-screen($md)
+    margin-right: 20px
+    width: 620px
+    margin-bottom: 40px
+.contact__form-title 
+  margin-bottom: 29px
+  font-size: rem(20px)
+  font-family: $OpenSansBold
+  text-transform: uppercase
+  color: #0d0d0d
+.contact__form
+.contact__form-row
+  position: relative
+  margin-bottom: 10px
+  & .icon
+    position: absolute
+    +size(18px)
+    right: 30px
+    top: 14px
+    fill: #808080
+
+  & label.error
+    position: relative
+    display: block
+    padding: 10px
+    background-color: rgba(red, .5)
+    margin-top: 10px
+    border-radius: 10px
+    color: #fff
+    &:after
+      content: ''
+      position: absolute
+      left: 10px
+      top: 0
+      margin-top: -10px
+      border-style: solid;
+      border-width: 0 7.5px 10px 7.5px
+      border-color: transparent transparent rgba(red, .5) transparent
+.contact__form-row--textarea
+  margin-bottom: 22px
+.contact__form-input
+  position: relative
+  display: block
+  width: 100%
+  padding: 7px 50px 8px 28px
+  font-size: rem(15px)
+  color: #808080
+  line-height: rem(26px)
+  border: 2px solid #d9d9d9
+  &:focus
+    border-color: #f39c12
+  &.error
+    border-color: red
+.concat__form-text-area
+  height: 125px
+  resize: none
+  max-height: 125px
+  max-width: 100%
+.contact__form-submit
+  display: inline-block
+  padding: 7px 37px 8px
+  font-size: rem(14px)
+  font-family: $OpenSansSemibold
+  text-transform: uppercase
+  color: #000
+  background-color: #FFF
+  border: 2px solid #f39c12
+  transition-property: background-color color  
+  transition-duration: .4s  
+  max-width: 90%
+  &:hover
+    color: #fff
+    background-color: #f39c12
+  &:focus
+    outline: none
+.contact__info
+  max-width: 100%
+  +min-screen($md)
+    width: 490px
+.contact__info-title
+  margin-bottom: 21px
+.contact__info-text 
+  margin-bottom: 24px
+  line-height: rem(28px)
+  color: #737373
+.contact__info-row
+  position: relative
+  display: flex
+  align-items: center
+  padding-left: 1px
+  margin-bottom: 8px
+.contact__info-icon
+  +size(34px)
+  display: flex
+  align-items: center
+  justify-content: center
+  flex-shrink: 0
+  margin-right: 20px
+  border-radius: 50%
+  border: 2px solid #f39c12 
+  & .icon
+    +size(18px)
+.contact__info-row
+  & address
+    letter-spacing: -0.32px
+    max-width: 80%
+.contact__info-phones
+  letter-spacing: -0.32px
+  max-width: 80%
+.contact__info-mail
+  max-width: 80%
+
+.contact__info-title 
+  @extend .contact__form-title

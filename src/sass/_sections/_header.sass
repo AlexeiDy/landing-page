@@ -1,0 +1,179 @@
+$s-font-color: #fff
+$s-menu-link-color_hover: #0d0d0d
+$hamburger-color: #fff
+.header
+  position: absolute
+  left: 0
+  right: 0
+  top: 20px
+  color: $s-font-color
+  z-index: 99
+  +min-screen($lg)
+    top: 84px
+.header--fixed
+  display: none
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  padding-top: 15px
+  padding-bottom: 15px
+  background-color: #f39c12
+  box-shadow: 0 2px 4px black 
+  z-index: 99
+  +min-screen($lg)
+    top: 0
+  .logo
+    +size(80px)
+    font-size: rem(20px)
+    &:hover
+      color: #000
+      border-color: #000
+  .menu__item
+    background-color: #f39c12
+    &:hover
+        background-color: rgba(78, 95, 112, 1)
+    +min-screen($xl)
+      &:hover
+        background-color: transparent
+  .menu__link
+    &:hover
+      color: #fff 
+    +min-screen($xl)
+      &:hover
+        color: $s-menu-link-color_hover
+.header__row
+  display: flex
+  flex-wrap: wrap
+  align-items: center
+  position: relative
+.header__logo
+  margin-right: auto
+  overflow: hidden
+.logo
+  display: flex
+  justify-content: center
+  align-items: center 
+  +size(100px)
+  font-family: $Montserrat
+  font-size: rem(30px)
+  text-transform: uppercase
+  border-radius: 50%
+  border: 2px solid #fff
+  transition: .4s
+  &:hover
+    color: $body-main-color
+    border-color: $body-main-color
+  +min-screen($lg)
+    +size(150px)
+    font-size: rem(45px)
+    line-height: rem(45px)
+.header__hamburger
+  display: block
+  position: relative
+  +size(60px, 50px)
+  transform: rotate(0deg)
+  transition: .5s ease-in-out
+  cursor: pointer
+  z-index: 100
+  span
+    display: block
+    position: absolute
+    height: 10px
+    width: 100%
+    background: $hamburger-color
+    border-radius: 9px
+    opacity: 1
+    left: 0
+    transform: rotate(0deg)
+    transition: .25s ease-in-out
+    &:nth-child(1)
+      top: 0
+      transform-origin: left center
+    &:nth-child(2)
+      top: 20px
+      transform-origin: left center
+    &:nth-child(3)
+      top: 40px
+      transform-origin: left center
+  &.open
+    span
+      &:nth-child(1)
+        transform: rotate(42deg)
+        top: 0
+        left: 9px
+      &:nth-child(2)
+        width: 0
+        opacity: 0
+      &:nth-child(3)
+        transform: rotate(-42deg)
+        top: 39px
+        left: 7px
+  +min-screen($xl)   
+    display: none
+.header__nav
+  display: none
+  position: absolute
+  left: 0
+  right: 0
+  top: 95px
+  width: 100%
+  +min-screen($xl)
+    position: relative
+    top: 0
+    display: block 
+    width: auto
+    margin-left: 0
+    max-width: 87.17948717948718%
+.menu
+  display: flex
+  flex-wrap: wrap
+  list-style-type: none
+  flex-direction: column 
+  width: 100%
+  word-wrap: break-word
+  +min-screen($xl)
+    flex-direction: row 
+.menu__item
+  position: relative
+  display: block
+  text-align: center
+  font-size: rem(22px)
+  font-family: $OpenSansBold
+  background-color: rgba(#4e5f70,.9)
+  border-bottom: 2px solid rgba(#000, .5)
+  &:hover
+    background-color: #f39c12
+  +min-screen($xl)
+    text-align: left 
+    margin-left: 85px
+    padding: 0
+    font-size: rem(18px)
+    font-family: $OpenSansSemibold
+    background-color: transparent 
+    border-bottom: none
+    max-width: 80%
+    &:last-child 
+      &:after
+        display: none
+    &:after
+      content: '\\\\'
+      position: absolute
+      top: -2px
+      left: 100%
+      margin-left: 36px
+    &:hover
+      background-color: transparent
+
+.menu__link
+  display: block
+  padding: 20px 0
+  line-height: rem(22px)
+  text-transform: uppercase
+  transition: .5s
+  max-width: 100%
+  +min-screen($xl)
+    padding: 0
+    line-height: rem(18px)
+  &:hover
+    color: $s-menu-link-color_hover

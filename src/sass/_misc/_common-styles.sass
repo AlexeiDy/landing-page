@@ -1,0 +1,149 @@
+$s-title-name-color: #0d0d0d
+$s-title-text-color: #4d4d4d
+$s-title-separator: $body-main-color
+
+.container
+  position: relative
+  width: 100%
+  max-width: 1170px
+  margin: 0 auto
+  padding: 0 15px
+  +min-screen($md)
+    padding: 0 20px
+  +min-screen($xl)
+    padding: 0
+
+.row
+  display: flex
+  flex-wrap: wrap
+.g-section
+  position: relative
+  display: flex
+  align-items: center
+  padding-top: 50px 
+  padding-bottom: 50px
+  text-align: center
+  color: #fff
+  background-color: rgba(0, 0, 0, .7)
+  background-image: url('../img/sections/section-bg.png')
+  z-index: 1
+  &:after
+    position: absolute
+    content: ''
+    left: 0
+    right: 0
+    top: 0
+    bottom: 0
+    background-color: rgba(0, 0, 0, .4)
+    z-index: -1
+  +min-screen($lg)
+    min-height: 700px   
+    background-image: url('../img/sections/section-bg_lg.png')
+    background-color: transparent
+    background-repeat: no-repeat 
+    background-size: cover
+    &:after
+      display: none
+.s-title
+  display: flex
+  flex-direction: column
+  text-transform: uppercase
+  text-align: center
+  max-width: 100%
+  +min-screen($md)
+    flex-direction: row
+    align-items: center
+
+.s-title__name
+  position: relative
+  margin-bottom: 20px
+  color: $s-title-name-color
+  font-size: rem(30px)
+  font-family: $OpenSansBold
+  line-height: rem(30px)
+  max-width: 100%
+  &:after
+    content: ''
+    position: absolute
+    left: 0
+    right: 0
+    bottom: -10px 
+    display: block
+    +size(60px, 2px)
+    margin: 0 auto
+    background-color: $body-main-color
+  +min-screen($md)
+    width: 20%
+    text-align: right
+    padding-right: 19px
+    margin-bottom: 0
+    &:after
+      display: none
+  +min-screen($xl)
+    width: 17.09401709401709%
+    padding-top: 2px
+.s-title__text
+  flex: 1
+  position: relative
+  color: $s-title-text-color
+  font-size: rem(16px)
+  line-height: rem(25px) 
+  max-width: 100%
+  +min-screen($md)
+    text-align: left
+    padding-left: 20px
+    padding-right: 10px
+    max-width: 80%
+    &:after
+      content: ''
+      position: absolute
+      left: 0 
+      top: 0
+      bottom: 0
+      width: 4px
+      margin-top: 2px
+      margin-bottom: 3px
+      background-color: $body-main-color
+  +min-screen($xl)
+    max-width: 82.90598290598291%
+.btn-reset-styles
+  overflow: hidden
+  font-size: 0
+  appearance: none
+  box-shadow: none
+  border-radius: 0
+  border: 0
+  cursor: pointer
+  background-color: transparent
+  &:focus
+    outline: none
+.go-to-top
+  display: none
+  +size(50px)
+  position: fixed 
+  left: 10px
+  top: calc(100% - 100px) 
+  background-color: #f39c12
+  border: 1px solid grey
+  border-radius: 10px
+  z-index: 99 
+  cursor: pointer
+  opacity: 0.2
+  transition-property: opacity
+  transition-duration: 0.4s 
+  &:hover
+    opacity: 1
+  &:focus
+    outline: none
+  & .icon
+    position: absolute
+    left: 0
+    right: 0
+    top: 0
+    bottom: 0
+    margin: auto
+    +size(40px)
+    fill: #000
+  +min-screen($lg)
+    left: 40px
+    top: calc(100% - 150px)

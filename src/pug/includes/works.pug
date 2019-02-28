@@ -1,0 +1,61 @@
+section.portfolio#works
+  .container
+    .s-title.portfolio__title
+      h2.s-title__name
+        |portfolio
+      p.s-title__text
+        |Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet
+    .portfolio__slider-wrap
+      .portfolio__slider.js-portfolio-slider
+        -var num = 1
+        while (num < 4 )
+          .js-portolio-slider-item
+            .portfolio__slider-item 
+              .portfolio__slider-item-photo
+                .portfolio__slider-item-icon
+                  +icon('camera')
+                -var image=true
+                if(image)
+                  img(src='img/sections/portfolio/slider/photo1.jpg',alt='some images').portfolio__slider-item-img
+          -num++
+      .portfolio__slider-buttons
+          button.portfolio__slider-btn.portfolio__slider-arrow-left
+            +icon('arrow-left')
+          button.portfolio__slider-btn.portfolio__slider-arrow-right
+            +icon('arrow-right')
+          button.portfolio__slider-btn.portfolio__slider-btn--cancel
+            +icon('cancel')
+      .portfolio__slider-title
+        p.portfolio__slider-title-item
+          |Digital ArtWork
+        P.portfolio__slider-title-item--small
+          |Graphic Design
+    .portfolio__tabs
+      -var tabNavigation = [{'name':'All Work','.category':'*','active': true},{'name':'Graphics','category':'.graphics'},{'name':'WebDesign','category':'.webdesign'},{'name':'Branding','category':'.branding'},{'name':'Video','category':'.video'},{'name':'Photography','category':'.photography'}]
+      ul.tabs-nav.js-tabs-nav
+        each item in tabNavigation
+          if (item.active)
+            li(data-filter=item.category).tabs-nav__item.tabs-nav__item--active.js-tabs-nav-item
+              |#{item.name}
+          else
+            li(data-filter=item.category).tabs-nav__item.js-tabs-nav-item
+              |#{item.name}
+      .tabs__list.js-tabs-container
+        -var tabsItems = [{'imgSrc':'tab1.jpg','category':'graphics','title':'Project title here'},{'imgSrc':'tab2.jpg','category':'graphics','title':'Project title here'},{'imgSrc':'tab3.jpg','category':'webdesign','title':'Project title here'},{'imgSrc':'tab2.jpg','category':'webdesign','title':'Project title here'},{'imgSrc':'tab3.jpg','category':'photography','title':'Project title here'},{'imgSrc':'tab1.jpg','category':'branding','title':'Project title here'},{'imgSrc':'tab3.jpg','category':'branding','title':'Project title here'},{'imgSrc':'tab2.jpg','category':'video','title':'Project title here'}]
+        each item in tabsItems
+          div(class="js-tabs-item tabs__list-item"+" "+item.category) 
+            a(href='#777').tabs__list-link
+            .tabs__list-photo--wrap
+              .tabs__list-icon
+                +icon('camera')
+              -var image = true
+              if (image)
+                img(src="img/sections/portfolio/tabs/"+item.imgSrc,alt='some images').tabs__list-img
+              a(href="#777111111").tabs__list-link-preview
+                .icon--wrap
+                  +icon('plus')
+            .tabs__list-title
+              .tabs__list-title-name
+                |Project title here
+              .tabs__list-title-category
+                |#{item.category}

@@ -1,0 +1,58 @@
+.quote
+  display: flex
+  align-items: center
+.quote__row
+  position: relative
+  padding: 0 44px
+  color: #fff
+  font-family: $OpenSansBold
+  line-height: rem(30px)
+  +min-screen($lg)
+    line-height: rem(60px)
+.quote__text
+  position: relative
+  padding-top: 10px
+  margin-bottom: 40px
+  font-size: rem(20px)
+  &:after
+    content: ''
+    position: absolute
+    left: 0
+    right: 0
+    bottom: -20px
+    display: block
+    margin: 0 auto
+    width: 50px
+    height: 4px
+    background-color: rgb(243, 156, 18)
+  +min-screen($lg) 
+    font-size: rem(44px)
+    margin-bottom: 35px
+    padding-left: 20px
+    padding-right: 33px
+    &:after
+      right: 13px
+      bottom: -35px
+.quote__author  
+  font-size: 18px
+  text-transform: uppercase
+  +min-screen($lg)
+    margin-left: -10px
+    font-size: rem(24px)
+.quote__left-quote,
+.quote__right-quote
+  position: absolute
+  top: 0
+  font-size: rem(50px)
+  font-family: $OpenSansBold
+  +min-screen($lg)
+    top: 26px
+    font-size: rem(110px)
+.quote__left-quote
+  left: -30px
+  +min-screen($lg)
+    left: 0
+.quote__right-quote
+  right: -30px
+  +min-screen($lg)
+    right: 0

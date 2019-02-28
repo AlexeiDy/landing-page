@@ -1,0 +1,45 @@
+.clients
+  +min-screen($lg)
+    align-items: flex-start
+    padding-top: 203px
+.clients__title
+  margin-bottom: 48px
+  font-family: $OpenSansBold
+  font-size: rem(30px)
+  text-transform: uppercase
+  color: #ffffff
+.clients__row
+  display: flex
+  justify-content: space-between
+  align-items: center
+  margin-bottom: 50px
+  flex-direction: column
+  +min-screen($sm)
+    flex-direction: row
+    flex-wrap: wrap
+.clients__item
+  position: relative
+  width: 100%
+  padding-top: 50%
+  margin-bottom: 20px
+  background-color: rgba(242, 242, 242, 0)
+  border: 2px solid rgba(255, 255, 255, 0.25)
+  overflow: hidden
+  +min-screen($sm)
+    width: 46%
+    margin: 2% 1%
+    padding-top: 40%
+  +min-screen($lg)
+    margin: 0
+    padding-top: 0
+    +size(21.96581196581197%,162px)
+.clients__item-img
+  display: block
+  position: absolute
+  left: 0
+  right: 0
+  bottom: 0
+  top: 0
+  margin: auto
+  max-width: 100% 
+

@@ -1,0 +1,83 @@
+.testimonials
+  +min-screen($md)
+      padding-top: 80px
+  +min-screen($lg)
+    align-items: flex-start
+    padding-top: 179px
+.testimonials__slider 
+  .slick-dots
+    list-style-type: none
+    text-align: center
+    li
+      display: inline-block
+      +size(11px)
+      margin: 0 4px
+      button
+        +size(100%)
+        font-size: 0
+        background-color: rgba(255, 255, 255, 0.2)
+        border-radius: 50%
+        border: none
+        &:hover
+          background-color: #FFF
+      &.slick-active 
+        button
+          background-color: #FFF
+.testimonials__item
+  margin-bottom: 15px
+.testimonials__item-name
+  position: relative
+  margin-bottom: 38px
+  font-size: rem(24px)
+  font-family: $OpenSansBold
+  text-transform: uppercase
+  color: #ffffff
+  line-height: rem(60px)
+  &:after
+    content: ''
+    position: absolute
+    display: block
+    left: 0
+    right: 0
+    bottom: -6px
+    +size(50px,4px)
+    margin: 0 auto
+    background-color: #f39c12
+.testimonials__item-text
+  margin-bottom: 25px 
+  font-size: rem(22px)
+  font-family: $OpenSansLightItalic
+  color: #ffffff
+  line-height: rem(30px)
+  +min-screen($lg)
+    width: 767px
+    margin: 0 auto
+    margin-bottom: 25px
+    letter-spacing: -0.2px
+.testimonials__item-avatar
+  position: relative
+  +size(104px)
+  border-radius: 50%
+  margin: 0 auto
+.testimonials__item-icon
+  display: flex
+  align-items: center
+  justify-content: center
+  +size(100%)
+  border-radius: 50%
+  background-color: #f39c12
+  border: 2px solid #ffffff
+  & .icon
+    +size(56px ,62px)
+    fill: #fff
+  & .testimonials__item-img
+    display: block
+.testimonials__item-img
+  display: none
+  position: absolute
+  left: 0
+  right: 0
+  top: 0
+  bottom: 0
+  +size(100%)
+  border-radius: 50%

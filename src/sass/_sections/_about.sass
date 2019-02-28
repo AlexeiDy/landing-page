@@ -1,0 +1,160 @@
+.about
+  padding: 100px 0 92px
+.about__title
+  margin-bottom: 100px
+  +min-screen($lg)
+    margin-bottom: 142px
+.about__story 
+  display: flex
+  flex-direction: column
+  padding-bottom: 50px
+  border-bottom: 2px solid #e6e6e6
+  +min-screen($lg)
+    flex-direction: row
+    padding-bottom: 116px
+.about__story-left
+  width: 100%
+  +min-screen($lg)
+    width: 61.53846153846154%
+.about__box
+  position: relative
+  width: 100%
+  margin-bottom: 30px
+  max-width: 100%
+  +min-screen($lg)
+    padding-left: 155px
+    margin-bottom: 0
+    padding-right: 60px  
+.about__box-icon-wrap
+  position: absolute
+  right: 0 
+  top: -10px
+  +min-screen($lg)
+    left: 0
+    top: 4px
+    right: auto
+.about__box-icon
+  position: relative
+  display: block
+  +size(50px)
+  border-radius: 50%
+  border: 1px solid $body-main-color
+  +min-screen($lg)
+    +size(125px)
+  & .icon
+    +absolute-center
+  & .icon-lamp
+    +size(28px, 40px)  
+  & .icon-params
+    +size(32px)
+.about__box-title
+  padding-right: 45px
+  margin-bottom: 25px
+  font-family: $OpenSansBold
+  font-size: rem(20px)
+  line-height: rem(25px)
+  text-transform: uppercase
+  color: #0d0d0d
+  max-width: 90%
+  +min-screen($lg)
+    margin-bottom: 18px
+    padding-right: 0
+.about__box-paragraph 
+  margin-bottom: 28px
+  font-size: rem(16px)
+  line-height: rem(28px)
+  color: #737373
+  &:last-child
+    margin-bottom: 0
+
+.about__box-paragraph--accent
+  font-family: $OpenSansLight
+  font-size: rem(20px)
+  color: #e74c3c
+.about__story-img-wrap
+  width: 100%
+  max-height: 50%
+  +min-screen($lg)
+    flex: 1
+    flex-shrink: 0
+    padding-top: 5px
+    
+.about__story-img
+  display: inline-block
+  margin: 0 auto
+  max-width: 100%
+  max-height: 100%
+.about__skills
+  display: flex
+  padding-top: 50px
+  flex-direction: column
+  +min-screen($lg)
+    flex-direction: row 
+    padding-top: 116px
+.about__skills-left
+  position: relative
+  display: none
+  order: 2
+  +min-screen($lg)
+    display: block
+    order: 1
+    width: 50%
+    padding-left: 23px
+    padding-right: 65px
+    padding-top: 8px
+.about__skills-img
+  display: inline-block
+  max-width: 100%
+.about__skills-right
+  display: flex
+  flex-direction: column
+  order: 1
+  width: 100%
+  +min-screen($lg)
+    width: 50%
+    padding-left: 30px
+    order: 2
+.about__box--skills
+  +min-screen($lg)
+    padding-right: 10px
+    max-width: 585px
+    margin-bottom: 55px
+  .about__box-title
+    +min-screen($lg)
+      margin-bottom: 15px
+.about__bars-list
+  list-style-type: none
+.about__bars-item
+  width: 100%
+  margin-bottom: 36px
+  &:last-child
+    margin-bottom: 0
+.about__bars-item-title
+  margin-bottom: 6px 
+  font-family: $OpenSansLight
+  line-height: rem(28px)
+  color: #0d0d0d
+  text-transform: uppercase
+.about__bars-item-title--bold
+  position: relative
+  margin-right: 15px
+  font-family: $OpenSansSemibold
+  color: #0d0d0d
+  &:after
+    content: '/'
+    position: absolute
+    left: 100%
+    margin-left: 5px
+    color: #bfbfbf  
+    font-family: $OpenSansSemibold
+.about__bars-bar
+  position: relative
+  +size(99.8%, 10px)
+  margin-left: 2px
+  background-color: #e7e7e7
+.about__bars-progress
+  position: absolute
+  left: 0
+  top: 0
+  bottom: 0
+  background-color: $body-main-color

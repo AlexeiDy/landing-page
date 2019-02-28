@@ -1,0 +1,106 @@
+$s-font-color: #fff
+$s-slider-item-btn-color: $body-main-color
+$s-slider-item-btn-border-color: $body-main-color
+
+.banner
+  position: relative
+  padding-top: 200px
+  padding-bottom: 100px
+  color: $s-font-color
+  word-wrap: break-word
+  background-color: #34495e
+  background-image: url('../img/sections/banner/background.png')
+  background-repeat: repeat
+  +min-screen($md)
+    background-color: #fff
+    background-image: url('../img/sections/banner/background-lg.png')
+    background-repeat: no-repeat
+    background-size: cover
+  +min-screen($lg)
+    padding-top: 457px 
+    padding-bottom: 30px
+    min-height: 1098px
+.banner__slider
+  width: 100%
+  padding: 0 10px
+.banner__item
+  margin-bottom: 120px
+  text-align: center
+  text-transform: uppercase
+.banner__item-headings
+  margin-bottom: 93px
+.banner__item-title
+  display: block
+  margin-bottom: 10px
+  font-family: $OpenSansLight
+  font-size: rem(15px)
+  line-height: rem(15px)
+  &:last-child
+    margin-bottom: 0
+  +min-screen($md)
+    margin-bottom: 15px
+    font-size: rem(25px)
+    line-height: rem(25px)
+  +min-screen($lg)
+    margin-left: -5px
+    margin-bottom: 13px 
+    font-size: rem(45px)
+    line-height: rem(45px) 
+    letter-spacing: -0.7px 
+.banner__item-title--lg
+  font-family: $OpenSansBold
+  font-size: rem(35px)
+  line-height: rem(35px)
+  +min-screen($md)
+    font-size: rem(50px)
+    line-height: rem(50px)
+  +min-screen($lg)
+    margin-left: -8px
+    margin-bottom: 15px
+    font-size: rem(70px)
+    line-height: rem(70px)
+    letter-spacing: -4.2px
+.banner__item-title--sm
+  font-family: $OpenSansLight
+  +min-screen($md)
+    font-size: rem(20px)
+    line-height: rem(20px)
+  +min-screen($lg)
+    font-size: rem(40px)
+    line-height: rem(40px)
+    letter-spacing: -2.2px
+.banner__item-btn
+  display: inline-block
+  padding: 11px 33px 10px
+  font-size: rem(14px)
+  line-height: rem(17px)
+  font-family: $OpenSansSemibold
+  border: 2px solid $s-slider-item-btn-border-color
+  background-color: $s-slider-item-btn-color
+  transition: .4s
+  max-width: 90%
+  +min-screen($md)
+    border-color: #fff
+    background-color: transparent 
+    &:hover
+      border-color: $s-slider-item-btn-border-color
+      background-color: $s-slider-item-btn-color
+.banner__slider
+  .slick-dots
+    list-style-type: none
+    text-align: center
+    li
+      display: inline-block
+      +size(12px)
+      margin: 0 3px
+      button
+        +size(100%)
+        font-size: 0
+        background-color: rgba(255, 255, 255, 0.2)
+        border-radius: 50%
+        border: none
+        &:hover
+          background-color: #FFF
+      &.slick-active 
+        button
+          background-color: #FFF

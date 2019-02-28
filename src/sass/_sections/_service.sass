@@ -1,0 +1,63 @@
+.service
+  padding-top: 100px
+.service__title
+  margin-bottom: 147px
+.service__list
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  padding-bottom: 115px
+  border-bottom: 2px solid #e6e6e6
+  max-width: 100%
+  +min-screen($lg)
+    flex-direction: row
+.service__item  
+  position: relative
+  margin-bottom: 50px
+  text-align: center
+  max-width: 100%
+  &:last-child
+    margin-bottom: 0
+  +min-screen($md)
+    padding-left: 40px
+    padding-right: 40px
+  +min-screen($lg)
+    width: 310px
+    margin-bottom: 0 
+    padding-left: 0
+    padding-right: 0
+  +min-screen($xl)
+    width: 371px 
+    padding-left: 4px
+    &:first-child
+      padding-left: 0
+        
+  &:hover
+    & .service__item-icon-wrap
+      background-color: #f39c12
+    & .icon
+      fill: #fff
+
+.service__item-icon-wrap
+  display: flex
+  justify-content: center
+  align-items: center
+  +size(105px)
+  margin: 0 auto
+  margin-bottom: 25px
+  border: 2px solid #f39c12
+  border-radius: 50%
+  transition: .4s
+  & .icon
+    +size(32px) 
+    fill: #0d0d0d
+.service__item-title
+  margin-bottom: 14px
+  font-size: rem(20px)
+  font-family: $OpenSansBold
+  text-transform: uppercase
+  color: #0d0d0d
+  line-height: rem(25px)
+.service__item-text
+  color: #737373
+  line-height: 28px

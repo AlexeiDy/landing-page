@@ -1,0 +1,233 @@
+.portfolio
+  padding-top: 100px
+  padding-bottom: 100px
+.portfolio__title
+  margin-bottom: 147px
+.portfolio__slider-wrap
+  position: relative
+  padding-bottom: 116px
+  border-bottom: 2px solid #e6e6e6
+.portfolio__slider
+  position: relative  
+  margin-bottom: 50px
+  .slick-dots
+    position: absolute
+    right: 20px
+    top: 50%
+    transform: translateY(-50%)
+    list-style-type: none
+    text-align: center
+    li
+      position: relative
+      margin-bottom: -5px
+      button
+        +size(15px)
+        font-size: 0
+        background-color: rgba(255, 255, 255, 0.2)
+        border-radius: 50%
+        border: none
+        &:hover
+          background-color: #FFF
+      &.slick-active 
+        button
+          background-color: #FFF 
+    +min-screen($lg)
+      top: 253px
+      transform: translateY(0)
+      li
+.portfolio__slider-item-photo
+  position: relative
+  padding-top: 60%
+  +min-screen($md)
+    padding-top: 0 
+    +size(100%,580px)
+  & .portfolio__slider-item-img
+    display: block
+.portfolio__slider-item-icon
+  position: absolute
+  left: 0
+  right: 0
+  top: 0
+  bottom: 0
+  display: flex
+  align-items: center 
+  justify-content: center
+  background-color: #f39c12
+  & .icon
+    +size(74px,58px)
+    fill: #fff
+.portfolio__slider-item-img
+  display: none
+  position: absolute
+  left: 0
+  right: 0
+  top: 0
+  bottom: 0
+  +size(100%)
+  z-index: 2
+.portfolio__slider-title
+  text-align: center
+  line-height: rem(25px)
+  color: #0d0d0d
+.portfolio__slider-title-item
+  margin-bottom: 2px
+  font-size: rem(20px)
+  font-family: $OpenSansBold
+  text-transform: uppercase
+.portfolio__slider-title-item--small
+  letter-spacing: -1px
+  color: #808080
+.portfolio__slider-buttons
+  display: flex
+  justify-content: center
+  margin-bottom: 19px
+.portfolio__slider-btn
+  @extend .btn-reset-styles
+  display: flex
+  align-items: center
+  justify-content: center
+  margin: 0 2px
+  +size(35px)
+  background-color: #ffffff
+  border: 2px solid #e6e6e6
+  transition-property: all  
+  transition-duration: .4s
+  & .icon
+    +size(12px)
+  &:hover
+    background-color: #f39c12
+    border-color: #f39c12
+    & .icon
+      fill: #fff
+.portfolio__tabs
+  padding-top: 113px
+.tabs-nav
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+  margin: 0 auto
+  margin-bottom: 72px
+  list-style-type: none
+  max-width: 730px
+.tabs-nav__item
+  position: relative
+  display: inline-block
+  font-size: rem(14px)
+  font-family: $OpenSansBold
+  text-transform: uppercase
+  line-height: rem(25px)
+  color: #0d0d0d
+  cursor: pointer
+  max-width: 100%
+  margin-right: 50px
+  &:last-child
+    margin-right: 0
+    &:after
+      display: none
+      margin-right: 25px
+  &:after
+    position: absolute
+    content: '\\\\'
+    top: 0
+    left: 100%
+    margin-left: 23px
+    color: #a6a6a6
+.tabs-nav__item--active
+  color: #f39c12
+.tabs__list
+  display: flex
+  flex-wrap: wrap
+.tabs__list-item
+  position: relative
+  width: 100%  
+  padding-bottom: 20px
+  text-align: center
+  &:hover
+    .tabs__list-title-name
+      color: #f39c12
+    .tabs__list-link-preview
+      transition: .6s
+      display: block
+  +max-screen($md)
+    &:nth-child(2n)
+      .tabs__list-photo--wrap
+        background-color: #b7b7b7
+  +min-screen($sm)
+    width: 50%
+  +min-screen($md)
+    width: 25%
+  +min-screen($lg) 
+    width: 25%
+    &:nth-child(n+5):nth-child(odd)
+      .tabs__list-photo--wrap
+        background-color: #b7b7b7
+    &:nth-child(even):nth-child(-n+4)
+      .tabs__list-photo--wrap
+        background-color: #b7b7b7
+.tabs__list-link
+  position: absolute
+  left: 0
+  right: 0
+  bottom: 0
+  top: 0
+.tabs__list-photo--wrap
+  position: relative
+  margin-bottom: 17px
+  +size(100%,220px)
+  background-color: #c7c7c7
+.tabs__list-icon
+  position: absolute
+  left: 0
+  right: 0
+  bottom: 0
+  top: 0
+  display: flex
+  align-items: center
+  justify-content: center 
+  & .icon
+    +size(74px, 60px)
+    fill: #fff
+.tabs__list-img
+  position: relative
+  +size(100%)
+.tabs__list-link-preview
+  display: none
+  +size(100%)
+  position: absolute
+  left: 0
+  right: 0
+  top: 0
+  bottom: 0
+  background-color: rgba(#FFF, .4)
+  & .icon--wrap
+    position: absolute
+    +size(98px)
+    left: 0
+    right: 0
+    bottom: 0
+    top: 0
+    display: flex
+    align-items: center
+    justify-content: center
+    margin: auto
+    border-radius: 50%
+    background-color: rgba(243, 156, 18, 0.5)
+  & .icon
+    +size(46px)
+    fill: #fff
+.tabs__list-title
+  line-height: rem(22px)
+.tabs__list-title-name
+  font-size: rem(15px)
+  font-family: $OpenSansBold
+  text-transform: uppercase
+  color: #0d0d0d
+.tabs__list-title-category  
+  font-size: rem(14px)
+  font-family: $OpenSansRegular
+  color: #8c8c8c  
+  &:first-letter
+    text-transform: uppercase
+
+
+    

@@ -1,0 +1,16 @@
+header.header.js-header#header
+  .container
+    .header__row
+      .header__logo
+        a(href="/").logo
+          |mini
+      -var items = ['about', 'team', 'services', 'works', 'blog', 'contact']
+      button.header__hamburger.js-hamburger-btn.btn-reset-styles
+          span
+          span
+          span
+      nav.header__nav.js-navigation-menu
+        ul.menu
+          each item in items
+            li.menu__item
+              a(href="#"+item).menu__link.js-navigation-menu-link=item    

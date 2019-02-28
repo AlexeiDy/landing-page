@@ -1,0 +1,15 @@
+footer.footer
+  .container
+    .footer__row
+      .footer__text
+        span.footer__text-copyright
+          |© MINI 2014, All Right Reserves 
+        span.footer__text-designed
+          |Designed By bigpsfan &amp; Metrothemes
+      -var socials = ['twitter', 'facebook', 'linkedin', 'dribble', 'pinterest', 'google', 'rss']
+      ul.footer__socials-list
+        each item in socials
+          li.footer__socials-item
+            a(href="#777").footer__socials-link
+              +icon(item)
+

@@ -1,0 +1,27 @@
+.pricing
+  .container
+    .pricing__row
+      .pricing__package
+        .pricing__package-icon-wrap
+          +icon('banknote')
+        .pricing__package-title
+          |packege pricing
+        .pricing__package-text
+          |Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.   
+      -var pricings = [{'title':'basic','price':'$35',"desc":['First Description','Second Description','Third Description','Fourth Description']},{'title':'gold','price':'$99',"desc":['First Description','Second Description','Third Description','Fourth Description']},{'title':'silver','price':'$65',"desc":['First Description','Second Description','Third Description','Fourth Description']}] 
+      .pricing__list
+        each item in pricings
+          .pricing__item
+            .pricing__item-title
+              p.pricing__item-title-name
+                |#{item.title}
+              p.pricing__item-title-price
+                |#{item.price}
+            ul.pricing__item-desc-list 
+              each desc in item.desc
+                li.pricing__item-desc
+                  |#{desc}
+            .pricing__item-footer
+              .pricing__item-btn-wrap
+                a(href="#777").pricing__item-btn
+                 |purchase

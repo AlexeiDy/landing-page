@@ -1,0 +1,10 @@
+.g-section.facts
+  .container
+    .facts__row
+      -var facts = [{'icon':'cup','count':'6k+','name':'Coffees'},{'icon':'stack','count':'743','name':'Projects'},{'icon':'user','count':'435','name':'Clients'},{'icon':'like','count':'225','name':'Awards'}]
+      each fact in facts
+        .facts__item
+          .facts__item-icon-wrap
+            +icon(fact.icon)
+          .facts__item-count=fact.count
+          .facts__item-name=fact.name

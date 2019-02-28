@@ -1,0 +1,45 @@
+section.about#about
+  .container
+    .s-title.about__title
+      h2.s-title__name
+        |about
+      p.s-title__text
+        |Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet
+    .about__story
+      .about__story-left
+        .about__box
+          .about__box-icon-wrap
+            .about__box-icon
+              +icon('lamp')
+          h3.about__box-title
+            |our story
+          p.about__box-paragraph.about__box-paragraph--accent
+            |Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.
+          p.about__box-paragraph
+            |Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+      .about__story-img-wrap
+        img(src="img/sections/about/story.png",alt='some images').about__story-img
+    .about__skills
+      .about__skills-left
+        img(src="img/sections/about/tablet.png",alt='some images').about__skills-img
+      .about__skills-right
+        .about__box.about__box--skills
+          .about__box-icon-wrap
+            .about__box-icon
+              +icon('params')
+          .about__box-text
+            h3.about__box-title
+              |our skills
+            p.about__box-paragraph
+                |Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit.
+        -var skills = [{'name':'design', "per":'88%'},{'name':'development', "per":'76%'},{'name':'wordpress', "per":'81%'},{'name':'drupal', "per":'71%'}]
+        ul.about__bars-list
+          each skill in skills
+            li.about__bars-item
+              .about__bars-item-title
+                span.about__bars-item-title--bold
+                  |#{skill.name}
+                |#{skill.per}
+              .about__bars-bar
+                span(style="width:"+ skill.per+";").about__bars-progress
+

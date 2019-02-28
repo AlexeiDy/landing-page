@@ -1,0 +1,21 @@
+include ../mixins
+block variables
+
+doctype html
+html(lang="ru-RU")
+  head
+    meta(charset="utf-8")
+    title #{title}
+    meta(http-equiv='X-UA-Compatible', content="IE = edge")
+    meta(name="viewport" content="width=device-width,initial-scale=1")
+    meta(name="keywords" content="")
+    block metaTags
+    //- favicon block start
+    //- favicon block end
+    block linksInHead
+    link(rel="stylesheet" type='text/css' href="css/styles.min.css")
+    block scriptsInHead 
+    body
+      block content
+      block scriptsInBody  
+      script(src="./js/main.min.js")

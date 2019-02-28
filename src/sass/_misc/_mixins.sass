@@ -1,0 +1,73 @@
+=clearfix
+  &:before, 
+  &:after,
+    content: " "
+    display: table
+  &:after
+    clear: both
+
+=placeholder
+  &::-webkit-input-placeholder 
+    @content
+  &::-moz-placeholder
+    @content
+  &:-moz-placeholder
+    @content
+  &:-ms-input-placeholder
+    @content
+
+=wordwrap
+  max-width: 100%
+  word-wrap: break-word
+
+=font($name, $weight:normal, $style:normal)
+  @font-face
+    font-family: ""+$name
+    src: url("../fonts/" + $name + ".eot")
+    src: url("../fonts/" + $name + ".eot?#iefix") format("embedded-opentype"), url("../fonts/" + $name + ".woff2") format("woff2"), url("../fonts/" + $name + ".woff") format("woff"), url("../fonts/" + $name + ".ttf") format("truetype"), url("../fonts/" + $name + ".svg") format("svg")
+    font-weight: $weight
+    font-style: $style
+
+// font-size px to rem
+@function strip-units($number)
+  @return $number / ($number * 0 + 1)
+
+@function rem($size, $html: $html-font-size)
+  $size-without-px: strip-units($size)
+  $html-without-px: strip-units($html)
+  @return ($size-without-px/$html-without-px)+rem 
+
+// установка ширины и высоты
+=size($a, $b: null) 
+  width: $a
+  @if $b
+    height: $b
+  @else  
+    height: $a 
+
+// вставка иконки
+=si($iconname)
+  position: absolute
+  content: ''
+  @content
+  +s($iconname)
+
+// вставка иконки по абсолютному центру 
+=si-center($iconname)
+  position: absolute
+  content: ''
+  left: 0
+  right: 0
+  bottom: 0
+  top: 0
+  margin: auto
+  +s($iconname) 
+
+// центрирование блока
+@mixin absolute-center
+  position: absolute
+  left: 0
+  right: 0
+  top: 0
+  bottom: 0
+  margin: auto

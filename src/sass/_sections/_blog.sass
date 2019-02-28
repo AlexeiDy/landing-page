@@ -1,0 +1,122 @@
+.blog
+  padding-top: 100px
+  padding-bottom: 38px
+.blog__title
+  margin-bottom: 147px
+.blog__list
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+.blog__item
+  width: 100%
+  margin-bottom: 60px
+  +min-screen($md)
+    width: 47.5%
+.blog__item-img-wrap
+  position: relative
+  margin-bottom: 18px
+  +size(100%,300px)
+  background-color: #b7b7b7
+  overflow: hidden
+  & .blog__item-img
+    display: block
+.blog__item-icon
+  position: absolute
+  left: 0
+  right: 0
+  top: 0
+  bottom: 0
+  display: flex
+  align-items: center
+  justify-content: center
+  & .icon
+    +size(71px,58px)
+    fill: #fff
+.blog__item-img
+  position: relative
+  +size(100%)
+  display: none
+.blog__item-title-wrap
+  position: absolute
+  right: 0
+  bottom: 0
+  left: 0
+  display: flex 
+  justify-content: flex-end
+  align-items: flex-end
+  width: 100%
+.blog__item-title-icon
+  +size(44px)
+  background-color: #f39c12
+  display: flex
+  align-items: center
+  justify-content: center
+  & .icon
+    +size(24px)
+    fill: #fff
+.blog__item-title
+  display: inline-block
+  padding: 29px 36px 15px 21px
+  font-size: rem(20px)
+  font-family: $OpenSansBold
+  text-transform: uppercase
+  color: #0d0d0d
+  line-height: 1rem
+  background-color: #FFF
+  max-width: 86%
+  +min-screen($xl)
+    padding: 30px 36px 15px 20px
+.blog__item-desc
+  display: flex
+  justify-content: space-between
+  flex-direction: column
+  +min-screen($lg)
+    flex-direction: row
+.blog__item-desc-info
+  display: flex
+  width: 100%
+  justify-content: space-around 
+  font-size: rem(14px)
+  color: #808080
+  line-height: rem(24px)
+  text-align: right
+  +min-screen($lg)
+    flex-direction: column
+    justify-content: flex-start
+    width: 130px
+    padding-right: 35px
+.blog__item-desc-info-item
+  padding: 0 5px
+  max-width: 33%
+  +min-screen($lg)
+    max-width: 100%
+    padding: 0
+.blog__item-desc-right
+  flex: 1
+  display: flex
+  flex-direction: column
+  max-width: 100%
+  +min-screen($md)
+    max-width: 76.36%
+.blog__item-desc-text
+  margin-bottom: 22px
+  font-size: rem(16px)
+  line-height: rem(28px)
+  color: #737373
+  flex: 1 0 auto
+.blog__item-btn
+  flex: 0 0 auto
+  display: inline-block
+  padding: 6px 18px
+  letter-spacing: -0.2px
+  font-size: rem(14px)
+  font-family: $OpenSansBold
+  text-transform: uppercase
+  color: #0d0d0d
+  border: 2px solid #f39c12   
+  transition: .4s
+  max-width: 100%
+  &:hover
+    background-color: #f39c12
+    color: #fff
+

@@ -1,0 +1,36 @@
+.tweet
+  +min-screen($lg)
+    align-items: flex-start
+    padding-top: 232px
+    min-height: 696px
+.tweet__icon-wrap
+  display: flex
+  align-items: center
+  justify-content: center
+  margin: 0 auto
+  margin-bottom: 28px
+  +size(104px)
+  border: 2px solid #fff
+  border-radius: 50%
+  & .icon 
+    +size(34px,31px)
+    fill: #f39c12
+.tweet__text
+  margin-bottom: 15px
+  font-size: rem(22px)
+  font-family: $OpenSansBold
+  line-height: rem(33px)
+  letter-spacing: -0.15px
+  color: #ffffff
+  +min-screen($lg)
+    max-width: 818px
+    margin: 0 auto
+    margin-bottom: 14px
+  .tweet__text-link 
+    color: #f39c12
+    &:hover
+      color: #ccba9f
+.tweet__date
+  color: #808080
+  font-size: rem(15px)
+  font-family: $OpenSansLightItalic

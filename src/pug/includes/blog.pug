@@ -1,0 +1,37 @@
+section.blog#blog
+  .container
+    .s-title.blog__title
+      h2.s-title__name
+        |blog
+      p.s-title__text
+        |Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet 
+    .blog__list
+      -var a = 0
+      while (a<4)
+        article.blog__item
+          .blog__item-img-wrap
+            .blog__item-icon
+              +icon('camera')
+            -var image=true
+              if(image)
+                img(src='img/sections/blog/blog1.jpg',alt='some images').blog__item-img
+            .blog__item-title-wrap
+              .blog__item-title-icon
+                +icon('slideshow')
+              h5.blog__item-title
+                |Awesome Blog Post Title Goes Here
+          .blog__item-desc
+            .blog__item-desc-info
+              p.blog__item-desc-info-date.blog__item-desc-info-item
+                |21 Feb ‘14
+              p.blog__item-desc-info-author.blog__item-desc-info-item
+                |John Doe
+              p.blog__item-desc-info-comments-count.blog__item-desc-info-item
+                |24 Comments
+            .blog__item-desc-right
+              p.blog__item-desc-text
+                |Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit.
+              .blog__item-btn-wrap
+                a(href='#7777').blog__item-btn
+                  |read on
+        -a++

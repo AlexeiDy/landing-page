@@ -1,0 +1,33 @@
+section.team#team
+  .container
+    .s-title.team__title
+      h2.s-title__name
+        |team
+      p.s-title__text
+        |Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet 
+    -var teams = [{'img':'user1.png', 'name':'john doe', 'job':'Founder','text':'Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio.'}, {'img':'user1.png', 'name':'jesmine doe', 'job':'Designer','text':'Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio.'}, {'img':'user1.png', 'name':'martin doe', 'job':'Developer','text':'Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio.'}, {'img':'user1.png', 'name':'Anthony Doe', 'job':' Photographer','text':'Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio.'}]
+    -var socialList = ['twitter','facebook', 'dribble', 'google', 'linkedin']
+    ul.team__list
+      -var image = true 
+      each item in teams 
+        li.team__list-item
+          .team__list--item-img--wrap
+            if(image)
+              img(src="img/sections/team/"+item.img,alt='some images').team__list-item-img
+            else
+              .team__list-item-icon
+                +icon('team-user')
+          p.team__list-item-name
+            |#{item.name}
+          p.team__list-item-job
+            |#{item.job}
+          p.team__list-item-text
+            |#{item.text}
+          .team__list-item-socials
+            ul.team__social-list
+              each item in socialList
+                li.team__social-list-item
+                  a(href="#777", class="team__social-list-link team__social-list-link-"+item)
+                    +icon(item)
+
+

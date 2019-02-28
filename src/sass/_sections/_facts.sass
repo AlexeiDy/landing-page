@@ -1,0 +1,42 @@
+.facts
+  align-items: flex-start
+  padding-top: 196px
+.facts__row
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+.facts__item
+  width: 100%
+  font-family: $OpenSansBold
+  color: #ffffff
+  margin-bottom: 30px
+  +min-screen($sm)
+    width: 50%
+  +min-screen($lg)
+    width: auto
+    margin-bottom: 0
+    max-width: 25%
+  &:hover
+    & .facts__item-icon-wrap
+      border-color: #fff
+    & .icon
+      fill: #f39c12
+.facts__item-icon-wrap
+  display: flex
+  align-items: center
+  justify-content: center
+  +size(170px)
+  margin: 0 auto
+  margin-bottom: 30px
+  border: 2px solid #f39c12
+  border-radius: 50%
+  & .icon
+    +size(32px)
+    fill: #fff
+  +min-screen($lg)
+    margin-bottom: 16px
+.facts__item-count
+  font-size: rem(45px)
+  margin-bottom: -10px
+.facts__item-name
+  font-size: rem(25px)

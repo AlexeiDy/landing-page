@@ -1,0 +1,43 @@
+section.contact#contact
+  .container
+    .s-title.contact__title
+      h2.s-title__name
+        |contact
+      p.s-title__text
+        |Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet
+    .contact__row
+      .contact__form-wrap
+        h5.contact__form-title
+          |Drop Us A Message
+        form(method="GET",id="contactForm").contact__form
+          .contact__form-row
+            input(type='text',name='form_name',placeholder='Mike').contact__form-input
+            +icon('user')
+          .contact__form-row
+            input(type='email',name='form_email',placeholder='Email').contact__form-input
+            +icon('mail') 
+          .contact__form-row.contact__form-row--textarea
+            textarea(name='form_message',form='contactForm',placeholder="Message").contact__form-input.concat__form-text-area
+            +icon('pen')
+          input(type='submit',value="submit",name="form_submit").contact__form-submit
+      .contact__info
+        h5.contact__info-title
+          |Contact Info
+        .contact__info-text
+          |Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat
+        .contact__info-row
+          .contact__info-icon
+            +icon('marker')
+          address
+            |13/2 Elizabeth St, Melbourne VIC 3000, Australia
+        .contact__info-row
+          .contact__info-icon
+            +icon('phone')
+          .contact__info-phones
+            |+61 3146 8728, +61 0987 6543
+        .contact__info-row
+          .contact__info-icon
+            +icon('mail')
+          a(href='mailto:support@envato.net').contact__info-mail
+            |support@envato.net
+          

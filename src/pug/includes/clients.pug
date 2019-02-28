@@ -1,0 +1,9 @@
+section.clients.g-section
+  .container
+    h4.clients__title
+      |our clients
+    -var slides = ['echo-note.png', 'color.png', 'wm.png','continens.png']
+    .clients__row
+      each item in slides
+        a(href="#777").clients__item
+          img(src="img/sections/clients/"+item,alt='some images').clients__item-img

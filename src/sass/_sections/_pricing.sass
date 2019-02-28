@@ -1,0 +1,183 @@
+.pricing
+  padding-top: 50px
+  padding-bottom: 99px
+  +min-screen($xl)  
+    padding-top: 120px
+.pricing__row
+  display: flex
+  flex-wrap: wrap
+.pricing__package
+  margin-bottom: 30px
+  text-align: center
+  max-width: 100%
+  +min-screen($xl)
+    width: 320px
+    padding-right: 10px
+    margin-right: auto
+    margin-bottom: 0
+    text-align: left
+.pricing__package-icon-wrap
+  display: flex 
+  align-items: center
+  justify-content: center
+  +size(125px)
+  margin-left: auto
+  margin-right: auto
+  margin-bottom: 26px
+  border: 2px solid #f39c12
+  border-radius: 50%
+  +min-screen($xl)
+    margin-left: 0
+    margin-right: 0
+  & .icon
+    +size(32px)
+    fill: #0d0d0d
+.pricing__package-title
+  margin-bottom: 15px
+  font-size: rem(20px)
+  font-family: $OpenSansBold
+  text-transform: uppercase
+  color: #0d0d0d
+  line-height: rem(25px)
+.pricing__package-text
+  color: #737373
+  line-height: rem(28px)
+.pricing__list
+  display: flex
+  justify-content: center
+  flex-direction: column
+  width: 100%
+  +min-screen(825px)
+    flex-direction: row
+  +min-screen($xl) 
+    width: auto
+    justify-content: flex-end
+.pricing__item
+  position: relative
+  width: 100%
+  padding-bottom: 105px
+  margin-bottom: 40px
+  text-align: center 
+  background-color: #fafafa
+  border: 1px solid #e6e6e6
+  max-width: 100%
+  &:last-child
+    margin-bottom: 0
+  +min-screen(825px)
+    border-right: none
+    width: 33%
+    margin-bottom: 0
+    &:last-child
+      border-right: 1px solid #e6e6e6
+  +min-screen($xl)
+    width: 250px
+  +min-screen(825px)
+    &:hover
+      .pricing__item-title
+        color: #fff 
+      .pricing__item-title-price
+        position: relative
+        color: #fff
+        z-index: 4
+      .pricing__item-title-name:after
+        background-color: #FFF
+
+      .pricing__item-title:before
+        display: block
+      .pricing__item-footer
+        background-color: #e6e6e6
+        &:after
+          content: ''
+          position: absolute
+          left: 0
+          right: 0
+          bottom: -12px
+          display: block
+          height: 11px
+          margin-left: -1px
+          margin-right: -1px
+          background-color: #e6e6e6
+      .pricing__item-desc
+        background-color: #f2f2f2
+        &:nth-child(odd)
+          background-color: #e6e6e6
+
+.pricing__item-title
+  position: relative
+  padding: 13px 5px 15px
+  font-size: rem(22px)
+  font-family: $OpenSansBold
+  text-transform: uppercase
+  color: #0d0d0d
+  line-height: rem(45px)
+  background-color: #FFF
+  z-index: 4
+  &:after
+    content: ''
+    position: absolute
+    left: 0
+    right: 0
+    top: -16px
+    height: 16px
+  &:before
+    content: ''
+    position: absolute
+    left: 0
+    right: 0
+    top: 0
+    bottom: 0
+    margin: -17px -1px -1px 0
+    background-color: #f39c12
+    display: none
+    z-index: 3
+
+.pricing__item-title-name
+  position: relative
+  z-index: 4
+  &:after
+    content: ''
+    position: absolute 
+    left: 3px 
+    right: 0
+    bottom: -2px
+    margin: 0 auto
+    +size(50px,2px)
+    background-color: #f39c12
+    z-index: 4
+.pricing__item-title-price
+.pricing__item-desc-list
+  list-style-type: none
+.pricing__item-desc
+  padding: 13px 5px 14px
+  background-color: #fafafa
+  border-top: 1px solid #e6e6e6
+  letter-spacing: -0.5px
+  &:nth-child(odd)
+    background-color: #FFf
+.pricing__item-btn-wrap
+  position: relative
+  width: 100% 
+.pricing__item-footer
+  position: absolute
+  left: 0
+  right: 0
+  bottom: 0
+  display: flex
+  align-items: center
+  justify-content: center
+  height: 105px
+  border-top: 1px solid #e6e6e6
+.pricing__item-btn
+  display: inline-block
+  padding: 8px 31px
+  font-size: rem(14px)
+  font-family: $OpenSansSemibold
+  text-transform: uppercase
+  letter-spacing: -0.9px
+  color: #0d0d0d
+  border: 2px solid #f39c12
+  max-width: 90%
+  transition: .4s
+  &:hover
+    background-color: #f39c12
+    color: #fff
